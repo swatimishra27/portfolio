@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import validator from 'validator'
 
 export function Form() {
-  const [state, handleSubmit] = useForm('xknkpqry')
+  const [state] = useForm('xknkpqry')
   const [validEmail, setValidEmail] = useState(false)
   const [message, setMessage] = useState('')
 
@@ -47,7 +47,7 @@ export function Form() {
       <h2>Get in Touch</h2>
       <p>Have an opportunity or question? Send me a message.</p>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={()=>{console.log("Form submitted")}}>
         <input
           id="email"
           type="email"
